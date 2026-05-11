@@ -1,0 +1,207 @@
+<!--
+  CASE STUDY — Noise Fest (process structure)
+  Where to paste: Open the Noise Fest project page in Elementor.
+  Keep the existing top hero and any video/image embeds at the bottom
+  (the "Output" section). Replace the body content between them with
+  this snippet, OR paste it as a single HTML widget that holds the
+  Brief → Tools → Process → Reflection sections.
+
+  The Output (videos + images) stays as-is in your existing Elementor
+  blocks below this snippet.
+-->
+<article class="tm-case">
+
+  <section class="tm-case__section tm-case__overview">
+    <span class="tm-case__eyebrow">Overview</span>
+    <p class="tm-case__lead">
+      Noise Fest needed a visual language that could match the volume of
+      the event itself — loud, layered, and unmistakable. The project
+      pairs brand-level art direction with AI-generated film to deliver a
+      campaign that lives across print, social, and motion.
+    </p>
+  </section>
+
+  <section class="tm-case__section">
+    <span class="tm-case__eyebrow">The Brief</span>
+    <h2 class="tm-case__h">What the work had to say</h2>
+    <p>
+      A live music event with a heavy underground identity. The campaign
+      had to feel like the room before the first set drops — tense,
+      saturated, slightly broken. It needed to read as a festival, not a
+      poster series: one tone, multiple surfaces, no filler.
+    </p>
+  </section>
+
+  <section class="tm-case__section">
+    <span class="tm-case__eyebrow">Tools &amp; Decisions</span>
+    <h2 class="tm-case__h">Why this stack</h2>
+    <ul class="tm-case__stack">
+      <li>
+        <strong>Midjourney</strong> — for grain, atmosphere, and
+        character. Faster than a photoshoot for testing a dozen visual
+        directions in an afternoon.
+      </li>
+      <li>
+        <strong>Grok</strong> — for prompt iteration and copy. Used as a
+        sparring partner to pressure-test taglines and prompt structure
+        before generation.
+      </li>
+      <li>
+        <strong>Kling</strong> — for motion. Kling held style continuity
+        across short shots better than the alternatives I tested for this
+        aesthetic.
+      </li>
+    </ul>
+  </section>
+
+  <section class="tm-case__section">
+    <span class="tm-case__eyebrow">Process</span>
+    <h2 class="tm-case__h">From prompt to cut</h2>
+    <ol class="tm-case__steps">
+      <li>
+        <span class="tm-case__step-n">01</span>
+        <div>
+          <h3>Prompt structure</h3>
+          <p>Locked a base prompt template — subject, lens, lighting,
+          grain, palette — so every image read as the same world.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tm-case__step-n">02</span>
+        <div>
+          <h3>Image generation</h3>
+          <p>Generated wide in Midjourney, narrowed to a tight set of
+          frames that defined the campaign's visual rules.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tm-case__step-n">03</span>
+        <div>
+          <h3>Video</h3>
+          <p>Animated the selected stills through Kling, keeping motion
+          minimal — drift, flicker, smoke — so the stills stayed the
+          hero.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tm-case__step-n">04</span>
+        <div>
+          <h3>Edit</h3>
+          <p>Cut to a single track in After Effects. Added grain, type,
+          and a low-end pass so the spot felt physical, not rendered.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="tm-case__section">
+    <span class="tm-case__eyebrow">Output</span>
+    <h2 class="tm-case__h">Selected work</h2>
+    <p class="tm-case__note">
+      Videos and key visuals below.
+    </p>
+    <!--
+      Keep your existing Elementor video embeds + image gallery directly
+      under this section. Do not duplicate them inside this HTML block.
+    -->
+  </section>
+
+  <section class="tm-case__section tm-case__reflection">
+    <span class="tm-case__eyebrow">What I'd do differently</span>
+    <p>
+      I'd build the motion language earlier — a few of the strongest
+      stills didn't translate to video, and I'd rather discover that in
+      week one than week three. Next time, prompt-test for motion first,
+      then design the stills around what moves.
+    </p>
+  </section>
+
+</article>
+
+<style>
+  .tm-case {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: clamp(48px, 7vw, 96px) 24px;
+    font-family: inherit;
+    color: inherit;
+    line-height: 1.65;
+  }
+  .tm-case__section + .tm-case__section {
+    margin-top: clamp(40px, 6vw, 72px);
+  }
+  .tm-case__eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 16px;
+  }
+  .tm-case__h {
+    font-family: inherit;
+    font-size: clamp(22px, 2.6vw, 28px);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+    line-height: 1.25;
+  }
+  .tm-case__lead {
+    font-size: clamp(17px, 1.7vw, 19px);
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+  }
+  .tm-case p { margin: 0 0 14px; opacity: 0.88; }
+  .tm-case__stack {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+  }
+  .tm-case__stack li {
+    padding: 18px 20px;
+    border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+    border-radius: 6px;
+  }
+  .tm-case__stack strong { font-weight: 600; }
+  .tm-case__steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step;
+  }
+  .tm-case__steps li {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 16px;
+    padding: 20px 0;
+    border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  }
+  .tm-case__steps li:last-child {
+    border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  }
+  .tm-case__step-n {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    opacity: 0.5;
+    padding-top: 4px;
+  }
+  .tm-case__steps h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 4px;
+  }
+  .tm-case__steps p { margin: 0; opacity: 0.82; }
+  .tm-case__note { opacity: 0.6; font-size: 14px; }
+  .tm-case__reflection {
+    padding: clamp(24px, 4vw, 36px);
+    border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+    border-radius: 6px;
+  }
+  .tm-case__reflection p { margin: 0; }
+  @media (max-width: 560px) {
+    .tm-case__steps li { grid-template-columns: 44px 1fr; gap: 12px; }
+  }
+</style>
