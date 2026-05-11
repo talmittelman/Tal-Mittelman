@@ -1,0 +1,82 @@
+<!--
+  CONTACT — Footer CTA
+  Where to paste: Edit the footer template (Elementor → Theme Builder →
+  Footer) or the homepage footer section. Replace the existing block
+  that shows the raw email + phone with this HTML widget.
+
+  IMPORTANT: Also remove the phone number from any other widget that
+  still displays it publicly.
+-->
+<section class="tm-contact" id="contact">
+  <div class="tm-contact__inner">
+    <p class="tm-contact__lead">Available for freelance and full-time roles.</p>
+    <div class="tm-contact__actions">
+      <a class="tm-btn tm-btn--primary"
+         href="mailto:adital555@gmail.com">
+        <span>Email</span>
+        <span class="tm-btn__addr">adital555@gmail.com</span>
+      </a>
+      <a class="tm-btn tm-btn--ghost"
+         href="https://www.linkedin.com/in/talmittelman"
+         target="_blank" rel="noopener noreferrer">
+        <span>LinkedIn</span>
+        <span class="tm-btn__addr">/in/talmittelman</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tm-contact {
+    padding: clamp(64px, 9vw, 120px) 24px;
+    font-family: inherit;
+    color: inherit;
+  }
+  .tm-contact__inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .tm-contact__lead {
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    margin: 0 0 28px;
+  }
+  .tm-contact__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .tm-btn {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+    transition: background .25s ease, border-color .25s ease, transform .25s ease;
+  }
+  .tm-btn:hover {
+    background: color-mix(in srgb, currentColor 6%, transparent);
+    border-color: color-mix(in srgb, currentColor 35%, transparent);
+    transform: translateY(-1px);
+  }
+  .tm-btn__addr {
+    font-size: 13px;
+    opacity: 0.6;
+    font-weight: 400;
+  }
+  .tm-btn--primary {
+    background: color-mix(in srgb, currentColor 8%, transparent);
+  }
+  @media (max-width: 520px) {
+    .tm-btn { width: 100%; justify-content: space-between; }
+    .tm-contact__actions { flex-direction: column; }
+  }
+</style>

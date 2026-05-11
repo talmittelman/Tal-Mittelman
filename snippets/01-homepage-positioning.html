@@ -1,0 +1,75 @@
+<!--
+  HOMEPAGE — Positioning block
+  Where to paste: Edit homepage in Elementor. Insert an HTML widget
+  directly BELOW the "Refining ideas into visual storytelling" hero
+  and ABOVE the projects grid. Paste this entire snippet.
+-->
+<section class="tm-positioning">
+  <div class="tm-positioning__inner">
+    <span class="tm-status" aria-label="Open to roles">
+      <span class="tm-status__dot" aria-hidden="true"></span>
+      Open to roles
+    </span>
+    <h2 class="tm-positioning__name">Tal Mittelman</h2>
+    <p class="tm-positioning__role">Creative AI Specialist · Brand Designer</p>
+    <p class="tm-positioning__desc">
+      I design brands and build AI-native creative workflows —
+      from visual identity to AI video ads and cinematic storytelling.
+    </p>
+  </div>
+</section>
+
+<style>
+  .tm-positioning {
+    padding: clamp(56px, 9vw, 112px) 24px clamp(40px, 6vw, 72px);
+    font-family: inherit;
+    color: inherit;
+  }
+  .tm-positioning__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tm-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 28px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  }
+  .tm-status__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.55;
+  }
+  .tm-positioning__name {
+    font-family: inherit;
+    font-size: clamp(28px, 3.6vw, 38px);
+    font-weight: 500;
+    margin: 0 0 6px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .tm-positioning__role {
+    font-size: 15px;
+    opacity: 0.6;
+    margin: 0 0 22px;
+  }
+  .tm-positioning__desc {
+    font-size: clamp(16px, 1.5vw, 18px);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 56ch;
+    opacity: 0.92;
+  }
+  @media (max-width: 600px) {
+    .tm-positioning { padding-left: 20px; padding-right: 20px; }
+  }
+</style>
