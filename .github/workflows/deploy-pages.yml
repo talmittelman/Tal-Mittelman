@@ -1,0 +1,57 @@
+# Builds Cosmos Atlas and publishes it to GitHub Pages:
+#   https://talmittelman.github.io/Tal-Mittelman/cosmos-atlas/
+# Each project lives in its own sub-folder of the site, so more portfolio pieces can sit beside it.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [claude/portfolio-ai-specialist-optimization-NmWDq, main]
+    paths: ['cosmos-atlas/**', '.github/workflows/deploy-pages.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: cosmos-atlas/package-lock.json
+      - name: Build Cosmos Atlas
+        working-directory: cosmos-atlas
+        run: |
+          npm ci
+          npm run build
+      - name: Assemble site
+        run: |
+          mkdir -p _site/cosmos-atlas
+          cp -r cosmos-atlas/dist/. _site/cosmos-atlas/
+          # Until there is a portfolio home page, the site root forwards to the atlas.
+          printf '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=cosmos-atlas/"><title>Tal Mittelman</title><a href="cosmos-atlas/">Cosmos Atlas</a>\n' > _site/index.html
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}cosmos-atlas/
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
