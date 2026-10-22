@@ -2,6 +2,8 @@
 
 An interactive, cinematic 3D map of the universe. Fly from Earth to the edge of the observable universe in one continuous camera move.
 
+**Live:** https://talmittelman.github.io/Tal-Mittelman/cosmos-atlas/
+
 **Status: Phase 1 of 5 complete.** The Solar System tier is live.
 
 ```bash
