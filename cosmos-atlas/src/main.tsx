@@ -6,6 +6,9 @@ import '@fontsource/space-grotesk/500.css'
 import './index.css'
 import { App } from './App'
 
+// iPad/iPhone Safari ignores user-scalable=no — stop pinches over the HUD from zooming the page.
+for (const ev of ['gesturestart', 'gesturechange']) document.addEventListener(ev, (e) => e.preventDefault(), { passive: false })
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />

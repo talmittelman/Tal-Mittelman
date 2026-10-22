@@ -16,6 +16,10 @@ body,
   color: var(--color-ink);
   overflow: hidden;
   overscroll-behavior: none;
+  touch-action: none; /* all gestures belong to the 3D view */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
   -webkit-font-smoothing: antialiased;
 }
 

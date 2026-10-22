@@ -4,6 +4,7 @@ import { TIERS } from '../../lib/tiers'
 import { formatDistance, formatLightTime } from '../../lib/units'
 import { TIME_SCALES, useAtlas, type Layer } from '../../store/useAtlas'
 
+const isTouch = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches
 const jdToDate = (jd: number) => new Date((jd - 2440587.5) * 86400000)
 
 export function Hud() {
@@ -70,7 +71,9 @@ function Hint() {
   }, [])
   return (
     <div className={`micro hidden text-center transition-opacity duration-1000 lg:block ${visible ? 'opacity-100' : 'opacity-0'}`}>
-      Drag to orbit · Scroll to zoom · Right-drag to pan · Click a name to travel
+      {isTouch
+        ? 'Drag to orbit · Pinch to zoom · Two-finger drag to pan · Tap a name to travel'
+        : 'Drag to orbit · Scroll to zoom · Right-drag to pan · Click a name to travel'}
     </div>
   )
 }
