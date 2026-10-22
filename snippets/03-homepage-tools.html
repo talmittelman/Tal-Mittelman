@@ -1,0 +1,66 @@
+<!--
+  HOMEPAGE — Tools & Stack row
+  Where to paste: Insert HTML widget directly AFTER the projects grid
+  and BEFORE the contact / footer area.
+-->
+<section class="tm-tools" aria-label="Tools and stack">
+  <div class="tm-tools__inner">
+    <span class="tm-tools__label">Tools &amp; Stack</span>
+    <ul class="tm-tools__list">
+      <li class="tm-pill">Midjourney</li>
+      <li class="tm-pill">Kling</li>
+      <li class="tm-pill">Runway</li>
+      <li class="tm-pill">After Effects</li>
+      <li class="tm-pill">Figma</li>
+      <li class="tm-pill">Adobe CC</li>
+      <li class="tm-pill">Nano Banana</li>
+      <li class="tm-pill">Grok</li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .tm-tools {
+    padding: clamp(48px, 7vw, 88px) 24px;
+    font-family: inherit;
+    color: inherit;
+    border-top: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+  }
+  .tm-tools__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 3vw, 40px);
+    flex-wrap: wrap;
+  }
+  .tm-tools__label {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    flex-shrink: 0;
+  }
+  .tm-tools__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tm-pill {
+    font-size: 13px;
+    line-height: 1;
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+    background: transparent;
+    opacity: 0.92;
+  }
+  @media (max-width: 600px) {
+    .tm-tools__inner { gap: 14px; }
+    .tm-tools__label { flex-basis: 100%; }
+  }
+</style>
