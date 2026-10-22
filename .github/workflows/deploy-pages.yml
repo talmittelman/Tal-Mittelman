@@ -22,8 +22,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -39,9 +39,8 @@ jobs:
           cp -r cosmos-atlas/dist/. _site/cosmos-atlas/
           # Until there is a portfolio home page, the site root forwards to the atlas.
           printf '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=cosmos-atlas/"><title>Tal Mittelman</title><a href="cosmos-atlas/">Cosmos Atlas</a>\n' > _site/index.html
+      # Pages must be switched on once by the repo owner: Settings → Pages → Source: GitHub Actions.
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
